@@ -1,0 +1,35 @@
+; letter
+(define a1 (solid:block (position -20 25 -5) (position -10 -5 5)))
+(define a2 (solid:block (position -20 -5 -5) (position 20 5 5)))
+(define a3 (solid:block (position 10 25 -5) (position 20 -25 5)))
+(define letter (bool:unite a1 a2))
+(define d (bool:unite letter a3))
+
+; volume
+(solid:massprop d)
+
+; edges amount
+(define (count_edges body)
+(define edges_list (entity:edges body))
+(define list-length (length edges_list))
+(print list-length))
+
+; light
+(define l1(light "spot"))
+(define ls1 (solid:sphere (position -40 -50 -50) 5))
+(light:set-prop l1 "intensity" 1)
+(light:set-prop l1 "location" (gvector -40 -50 -50))
+(light:create-shadows l1 (list m))
+(light:set #t (list l1))
+(render:set-mode "raytrace-full")
+(render)
+(blend:entities letter 0.5 "fix")
+
+
+
+(define m3 (material))
+(material:set-color-type m3 "wrapped brick")
+(material:set-color-prop m3 "brick color" (color:rgb 1 0 0))
+(material:set-color-prop m3 "scale" 10)
+(entity:set-material letter m3)
+(render)
