@@ -1,0 +1,7 @@
+﻿#include @"turtleGraphics\turtleGraphics.ph"
+% privately used packages
+#include @"pfc\math\math.ph"
+#include @"pfc\vpi\vpi.ph"
+#include @"pfc\core.ph"
+% implementations
+#include @"turtleGraphics\turtle.pro"

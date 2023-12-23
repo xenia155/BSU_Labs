@@ -1,0 +1,13 @@
+﻿#include @"canvas\canvas.ph"
+
+% privately used packages
+#include @"turtleGraphics\turtleGraphics.ph"
+#include @"pfc\math\math.ph"
+#include @"pfc\vpi\vpi.ph"
+#include @"pfc\gui\controls\button\button.ph"
+#include @"pfc\gui\gui.ph"
+#include @"pfc\resourceIdentifiers.ph"
+
+% implementations
+#include @"canvas\curve.pro"
+#include @"canvas\canvas.pro"
