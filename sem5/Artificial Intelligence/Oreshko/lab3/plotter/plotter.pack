@@ -1,0 +1,7 @@
+﻿#include @"plotter\plotter.ph"
+% privately used packages
+#include @"pfc\gui\controls\textControl\textControl.ph"
+#include @"pfc\gui\controls\editControl\editControl.ph"
+#include @"draw\draw.ph"
+% implementations
+#include @"plotter\map.pro"
